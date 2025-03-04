@@ -2,26 +2,34 @@
 import { NextResponse } from "next/server";
 import { projects } from "../../../../data";
 
-export async function GET(request: Request) {
-  const repos = projects.map((project) => project.repoName);
-  const dataPromises = repos.map(async (repo) => {
-    try {
-      const response = await fetch(
-        `https://api.github.com/repos/AhmedSalah8/${repo}`,
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
-          },
-        }
-      );
-      return await response.json();
-    } catch (error) {
-      console.error(`Error fetching ${repo}:`, error);
-      return null;
-    }
-  });
+const GITHUB_API_URL = "https://api.github.com/repos/AhmedSalah8";
+const HEADERS = {
+  Authorization: `Bearer ${process.env.GITHUB_TOKEN}`,
+};
 
-  const fetchedData = await Promise.all(dataPromises);
+async function fetchData(repo: string) {
+  try {
+    const response = await fetch(`${GITHUB_API_URL}/${repo}`, {
+      headers: HEADERS,
+    });
+    if (!response.ok)
+      throw new Error(`Failed to fetch ${repo}: ${response.statusText}`);
+    return response.json();
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+export async function GET(request: Request) {
+  const repoNames = projects.map((project) => project.repoName);
+
+  const results = await Promise.allSettled(repoNames.map(fetchData));
+
+  // Extract fulfilled results, replacing rejected ones with `null`
+  const fetchedData = results.map((res) =>
+    res.status === "fulfilled" ? res.value : null
+  );
 
   return NextResponse.json(fetchedData);
 }
