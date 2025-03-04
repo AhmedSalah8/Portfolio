@@ -7,52 +7,64 @@ import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import "yet-another-react-lightbox/plugins/thumbnails.css";
 import { cn } from "@/lib/utils";
 import { certificates } from "../../../../data";
+import { motion } from "framer-motion";
 
 export function CardDemo({
   img,
   title,
-  des,
+  index: cardIndex,
+  issuer,
+  date,
 }: {
   img?: string;
   title?: string;
   des?: string;
+  index?: number;
+  issuer?: string;
+  date?: string;
 }) {
   const [open, setOpen] = useState(false);
   const thumbnailsRef = React.useRef(null);
-
+  const [index, setIndex] = useState(cardIndex || 0); // Initialize with cardIndex
   return (
-    <div
-      className="w-[60%] sm:h-[400px] md:h-[450px] lg:h-[500px] h-[350px] me-3.5 mb-4 sm:w-[45%] md:w-[45%] lg:w-[30%] 
-       group/card"
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      whileHover={{ y: -10 }}
+      className="bg-[#121642] rounded-xl shadow-lg  hover:shadow-xl transition-shadow border-white/[0.2] border relative "
     >
       <div
         className={cn(
-          "cursor-pointer h-[100%] bg-[#121642] border-white/[0.2] rounded-xl border overflow-hidden relative card transition-all   flex flex-col justify-between",
-          "",
-          "w-full transition-all duration-300 hover:scale-105 "
+          "cursor-pointer bg-[#121642]  h-full  overflow-hidden relative card  rounded-xl  transition-all flex flex-col    items-center mb-4",
+          ""
         )}
       >
-        <div className="w-full h-[50%]">
+        <div className="bg-blue-100 p-2 rounded-lg h-48 w-full overflow-hidden">
           <img
             src={img}
             alt="img"
-            className="w-full h-[100%] rounded-lg transition duration-300 group-hover/card:scale-105"
+            className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
           />
         </div>
         <div
-          className="absolute w-full h-full top-0 left-0 transition duration-300 group-hover/card:bg-black opacity-60"
+          className="absolute w-full h-full top-0 left-0 "
           onClick={() => {
+            setIndex(cardIndex || 0); // Set index to cardIndex when clicked
             setOpen(true);
           }}
         ></div>
 
-        <div className=" w-full h-[50%] mt-2 sm:py-4 md:py-5">
-          <h1 className="font-bold text-sm text-center sm:text-base md:text-lg lg:text-xl text-gray-50 relative line-clamp-3 z-10 px-2 sm:px-4">
+        <div className=" w-full h-[50%]  sm:py-4 px-2 sm:px-4">
+          <h1 className="font-bold text-sm  sm:text-base md:text-lg lg:text-xl text-gray-50  line-clamp-3  ">
             {title}
           </h1>
-          <p className="lg:py-4 font-normal mt-2 text-xs sm:text-sm md:text-base text-gray-50 relative z-10  pl-3 sm:px-4">
-            {des}
+
+          <p className="tracking-[1px] font-normal mt-2 text-xs sm:text-sm md:text-base text-gray-50  ">
+            {issuer}
           </p>
+          <span className="text-sm text-white-200">{date}</span>
         </div>
       </div>
       <Lightbox
@@ -63,11 +75,7 @@ export function CardDemo({
           title: cert.title,
         }))}
         plugins={[Zoom, Thumbnails]}
-        on={{
-          click: () => {
-            console.log("Lightbox image clicked!");
-          },
-        }}
+        index={index}
         zoom={{
           scrollToZoom: true,
           maxZoomPixelRatio: 2,
@@ -85,6 +93,6 @@ export function CardDemo({
           vignette: true,
         }}
       />
-    </div>
+    </motion.div>
   );
 }

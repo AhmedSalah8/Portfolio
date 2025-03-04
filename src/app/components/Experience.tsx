@@ -3,7 +3,7 @@ import { TimelineDemo } from "./TimelineDemo";
 
 function Experience() {
   return (
-    <div id="experience">
+    <div id="experience" className="setion">
       <TimelineDemo />
     </div>
   );

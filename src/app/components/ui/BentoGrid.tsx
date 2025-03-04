@@ -2,16 +2,16 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { cn } from "@/lib/utils";
-import { div, span } from "framer-motion/client";
 import { BackgroundGradientAnimation } from "./Gradient";
 import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from "../../../../data/confetti.json";
 
 import MagicButton from "./MagicButton";
-import { FaLocationArrow } from "react-icons/fa";
+import { FaCopy } from "react-icons/fa";
 import { styleText } from "util";
-import { WorldMapDemo } from "../WorldMapDemo";
+import Skills from "../Skills";
+// import { WorldMapDemo } from "../WorldMapDemo";
 
 export const BentoGrid = ({
   className,
@@ -22,6 +22,7 @@ export const BentoGrid = ({
 }) => {
   return (
     <div
+      id="about"
       className={cn(
         "grid md:auto-rows-[18rem] grid-cols-1 md:grid-cols-4 gap-4 max-w-7xl mx-auto ",
         className
@@ -107,16 +108,16 @@ export const BentoGridItem = ({
             "group-hover/bento:translate-x-2 transition duration-200 relative  md:h-full min-h-40 flex flex-col px-5 py-5 lg:p-10"
           )}
         >
-          <div className="font-sans font-extralight text-(#c1c2d3) text-sm     md:text-sx lg:text-base z-10">
-            {description}
-          </div>
-          <div className="font-sans font-bold text-lg lg:text-3xl max-w-96 z-10">
+          <div className="font-sans font-bold text-lg lg:text-3xl  md:text-4xl max-w-96 z-10">
             {title}
           </div>
-          {id === 2 && <WorldMapDemo />}
+          <div className="font-sans font-normal  text-(#c1c2d3) text-base md:text-base lg:text-lg z-10">
+            {description}
+          </div>
+          {/* {id === 2 && <WorldMapDemo />} */}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:right-4 ">
-              <div className="flex flex-col gap-3  ">
+            <div className="flex gap-1 justify-center items-center w-full h-full lg:gap-5 ">
+              {/* <div className="flex flex-col gap-3  ">
                 <span className="py-4 px-3 rounded-lg text-center  " />
                 <span className="py-4 px-3 rounded-lg text-center" />
 
@@ -151,7 +152,8 @@ export const BentoGridItem = ({
                 ))}
                 <span className="py-4 px-3 rounded-lg text-center" />
                 <span className="py-4 px-3 rounded-lg text-center" />
-              </div>
+              </div> */}
+              <Skills />
             </div>
           )}
           {id === 6 && (
@@ -168,7 +170,7 @@ export const BentoGridItem = ({
               </div>
               <MagicButton
                 title={copied ? "Email Copied" : "Copy my Email"}
-                icon={<FaLocationArrow />}
+                icon={<FaCopy />}
                 position="left"
                 otherClasses="!bg-[#161a31]"
                 handleClick={handleCopy}

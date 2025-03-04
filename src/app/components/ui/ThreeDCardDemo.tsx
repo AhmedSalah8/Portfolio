@@ -3,11 +3,11 @@
 
 import React, { memo } from "react";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
-import { FaLocationArrow } from "react-icons/fa";
-import MagicButton from "./MagicButton";
-
+import { FaStar } from "react-icons/fa";
+// import DataApp from "./gitubapi";
+// import { FaLocationArrow } from "react-icons/fa";
+// import MagicButton from "./MagicButton";
 // Dynamically import heavy components
 const CardContainer = dynamic(
   () => import("../ui/3d-card").then((mod) => mod.CardContainer),
@@ -25,9 +25,10 @@ const CardItem = dynamic(
 interface ThreeDCardDemoProps {
   title: string;
   des: string;
-  img: string;
+  img: React.ReactNode;
   link: string;
-  iconLists: string[];
+  stargazers: number;
+  // iconLists: string[];
 }
 
 export const ThreeDCardDemo = memo(
@@ -36,16 +37,21 @@ export const ThreeDCardDemo = memo(
     des,
     img,
     link,
-    iconLists,
-  }: ThreeDCardDemoProps) {
+    stargazers,
+  }: // iconLists,
+  ThreeDCardDemoProps) {
     return (
       <CardContainer className="inter-var">
         <CardBody className="bg-[#020024] border-white/[0.1] relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1]  dark:border-white/[0.2]  w-auto sm:w-[30rem] h-auto rounded-xl p-6 border mr-4">
           <CardItem
             translateZ="50"
-            className="lg:text-2xl sm:text-xl text-base font-bold text-neutral-600 dark:text-white line-clamp-1 font-bold"
+            className="lg:text-2xl sm:text-xl text-base w-full relative font-bold text-neutral-600 dark:text-white line-clamp-1 "
           >
             {title}
+            <div className=" absolute top-0 right-0 flex justify-center items-center">
+              <span className="mr-1 text-base"> {stargazers} </span>
+              <FaStar className="inline text-yellow-500 text-base" />
+            </div>
           </CardItem>
           <CardItem
             as="p"
@@ -55,25 +61,16 @@ export const ThreeDCardDemo = memo(
             {des}
           </CardItem>
           <CardItem translateZ="100" className="w-full mt-4">
-            <Image
-              src={img}
-              height={600}
-              width={600}
-              priority={false}
-              loading="lazy"
-              placeholder="blur"
-              blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
-              className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-              alt={`Thumbnail for ${title}`}
-            />
+            {img}
           </CardItem>
           <CardItem
             translateZ={20}
             as={Link}
             href={link}
+            target="_blank"
             className="flex items-center justify-between w-full mt-4 group"
           >
-            <div className="flex items-center">
+            {/* <div className="flex items-center">
               {iconLists.map((icon, index) => (
                 <div
                   key={index}
@@ -86,14 +83,17 @@ export const ThreeDCardDemo = memo(
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
             <div className="flex items-center gap-2 text-purple hover:text-purple-700 transition-colors">
-              <a href="#about" className="ml-1">
-                <MagicButton
-                  title="Check Live Site"
+              <a href={link} target="_blank" className="ml-1">
+                {/* <MagicButton
+                  title=""
                   icon={<FaLocationArrow />}
                   position="right"
-                />
+                /> */}
+                <button className="px-8 py-2 rounded-md bg-[#103770] text-white font-bold transition duration-200 hover:bg-white hover:text-black border-2 border-transparent hover:border-[#2875b7]">
+                  Check Live Site
+                </button>
               </a>
             </div>
           </CardItem>
@@ -107,9 +107,9 @@ export const ThreeDCardDemo = memo(
       prevProps.title === nextProps.title &&
       prevProps.des === nextProps.des &&
       prevProps.img === nextProps.img &&
-      prevProps.link === nextProps.link &&
-      JSON.stringify(prevProps.iconLists) ===
-        JSON.stringify(nextProps.iconLists)
+      prevProps.link === nextProps.link
+      // JSON.stringify(prevProps.iconLists) ===
+      //   JSON.stringify(nextProps.iconLists)
     );
   }
 );

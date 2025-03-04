@@ -3,7 +3,7 @@ import { CardHoverEffectDemo } from "./ui/CardHoverEffect";
 
 function Skills() {
   return (
-    <div>
+    <div className="w-full">
       <CardHoverEffectDemo />
     </div>
   );

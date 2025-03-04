@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 
-import Link from "next/link";
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -25,8 +24,7 @@ export const HoverEffect = ({
       )}
     >
       {items.map((item, idx) => (
-        <Link
-          href={item?.img}
+        <div
           key={item?.img}
           className="relative group block p-2"
           onMouseEnter={() => setHoveredIndex(idx)}
@@ -53,7 +51,7 @@ export const HoverEffect = ({
             <CardImg src={item.img} alt={item.title} />
             <CardTitle>{item.title}</CardTitle>
           </Card>
-        </Link>
+        </div>
       ))}
     </div>
   );
@@ -69,7 +67,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[#121212] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 flex flex-col items-center justify-center",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[#0c0a2c] border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20 flex flex-col items-center justify-center",
         className
       )}
     >
