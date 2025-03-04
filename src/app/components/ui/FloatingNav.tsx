@@ -20,8 +20,8 @@ export const FloatingNav = ({
 
   useEffect(() => {
     const handleScroll = () => {
-      const sectionElements = navItems.map((item) =>
-        document.querySelector(item.link)
+      const sectionElements = navItems.map(
+        (item) => window && window.document.querySelector(item.link)
       );
 
       let foundActive = false; // Flag to ensure only one item is active
