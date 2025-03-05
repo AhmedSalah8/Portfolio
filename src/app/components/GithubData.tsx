@@ -13,7 +13,7 @@ export default function DisplayComponent() {
           <h2>{repo.name}</h2>
           <p>{repo.description}</p>
           <RepoImg id={repo.id} name={repo.name} />
-          <a href={repo.html_url}>View on GitHub</a>
+          <a href={repo.homepage}>View on GitHub</a>
         </div>
       ))}
       {/* <Image fill src={"../../../public/Users-Angular-App.png"} alt="img" /> */}

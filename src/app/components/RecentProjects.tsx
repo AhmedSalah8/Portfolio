@@ -14,7 +14,7 @@ function RecentProjects() {
       </h1>
       <div className="flex flex-wrap items-center justify-evenly p-r  gap-y-4 ">
         {repoData.map(
-          ({ id, name, description, html_url, stargazers_count }, index) => (
+          ({ id, name, description, homepage, stargazers_count }, index) => (
             <div
               key={`${id}-${name}-${index}`}
               className="lg:min-h-[32.5rem] h-[32rem] flex items-center justify-center sm:w-[570px] w-[80vw] "
@@ -23,7 +23,7 @@ function RecentProjects() {
                 title={name}
                 img={<RepoImg id={id} name={name} />}
                 des={description}
-                link={html_url}
+                link={homepage}
                 stargazers={stargazers_count}
               ></ThreeDCardDemo>
             </div>
