@@ -37,8 +37,7 @@ export const gridItems = [
   {
     id: 1,
     title: "Introduction ",
-    description: `I'm a Talented Front End Web Developer, with 1 Year of
-      Experience able to effectively self-manage during
+    description: `I'm a Talented Front End Web Developer, able to effectively self-manage during
       independent projects, as well as collaborate in a team
       setting,
       I am a Highly Motivated and Results-Oriented Individual with a Strong Work Ethic. I am Always Eager to Learn New Things and take on new challenges.`,
@@ -179,11 +178,7 @@ export const skills = [
     title: "Next.js",
     img: "/next.svg",
   },
-  {
-    title: "Acernity UI",
-
-    img: "/ace.png",
-  },
+ 
 ];
 
 export const socialMedia = [

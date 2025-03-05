@@ -1,10 +1,11 @@
 import React from "react";
-import { CardHoverEffectDemo } from "./ui/CardHoverEffect";
+import { skills } from "../../../data/index";
+import { HoverEffect } from "./ui/card-hover-effect";
 
 function Skills() {
   return (
-    <div className="w-full">
-      <CardHoverEffectDemo />
+    <div className="w-full mx-auto px-8">
+      <HoverEffect items={skills} />
     </div>
   );
 }
