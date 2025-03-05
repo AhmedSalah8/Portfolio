@@ -58,7 +58,7 @@ export function CardDemo({
         ></div>
 
         <div className=" w-full h-[50%]  sm:py-4 px-2 sm:px-4">
-          <h1 className="font-bold text-sm  sm:text-base md:text-lg lg:text-xl text-gray-50  line-clamp-3  ">
+          <h1 className="font-bold text-sm mt-2 sm:text-base md:text-lg lg:text-xl text-gray-50  line-clamp-3  ">
             {title}
           </h1>
 

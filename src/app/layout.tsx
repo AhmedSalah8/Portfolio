@@ -53,22 +53,22 @@ export default function RootLayout({
                 <div className=" w-full ">
                   <p className="font-sans font-medium text-white-100 text-xl mb-3 ">
                     Ready to collaborate or discuss opportunities? <br /> Feel
-                    free to reach out through any of these platforms.
+                    free to reach out.
                   </p>
-                  <div className="flex flex-row justify-center">
+                  <div className="flex flex-row gap-3 justify-center">
                     {socialMedia.map((item) => (
                       <a
                         key={item.id}
                         href={item.href}
                         target="/blank"
-                        className="m-4 "
+                        className=" "
                         download={item.download}
                       >
-                        <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white transform hover:scale-110 animation shadow-lg shadow-blue-500/25 hover:opacity-100 transition-opacity ">
+                        <div className="w-10 h-10 md:w-12 md:h-12 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center text-white transform hover:scale-110 animation shadow-lg shadow-blue-500/25 hover:opacity-100 transition-opacity ">
                           <img
                             src={item.img}
                             alt={item.alt}
-                            className="w-8 h-8 "
+                            className="w-5 h-5 md:w-7 md:h-7"
                           />
                         </div>
                       </a>
@@ -76,8 +76,8 @@ export default function RootLayout({
                   </div>
                 </div>
               </div>
-              <span className="m-4 block w-full border-t border-gray-500 border-opacity-50 pt-5">
-                © 2023-2028 Ahmed Salah All Rights Reserved
+              <span className="my-4 block w-full border-t border-gray-500 border-opacity-50 pt-5">
+                © 2025 Ahmed Salah All Rights Reserved
               </span>
             </div>
           </div>
