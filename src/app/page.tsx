@@ -5,6 +5,7 @@ import RecentProjects from "./components/RecentProjects";
 import { navItems } from "../../data";
 import Experience from "./components/Experience";
 import CertificatesGallery from "./components/CertificatesGallery";
+import Footer from "./components/Footer";
 
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
@@ -19,6 +20,7 @@ export default function Home() {
         <RecentProjects />
         <Experience />
         <CertificatesGallery />
+        <Footer />
       </div>
     </main>
   );

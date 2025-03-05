@@ -1,9 +1,16 @@
-// app/loading.tsx
-export default function Loading() {
+"use client";
+import { motion } from "framer-motion";
+
+const Loader = () => {
   return (
-    <div className="flex justify-center items-center h-screen">
-      <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500"></div>
-      <p className="ml-4 text-lg text-gray-700">Loading...</p>
+    <div className="flex items-center justify-center h-screen bg-[#040832]">
+      <motion.div
+        className="w-16 h-16 border-4 border-white-200 border-t-transparent rounded-full animate-spin"
+        animate={{ rotate: 360 }}
+        transition={{ repeat: Infinity, duration: 1 }}
+      />
     </div>
   );
-}
+};
+
+export default Loader;
