@@ -178,7 +178,10 @@ export const skills = [
     title: "Next.js",
     img: "/next.svg",
   },
- 
+  {
+    title: "Git",
+    img: "/git-logo.svg",
+  },
 ];
 
 export const socialMedia = [

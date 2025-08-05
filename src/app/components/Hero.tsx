@@ -23,7 +23,11 @@ function Hero() {
             Frontend Developer with a passion for building beautiful and
             functional user interfaces.
           </p>
-          <a href="/myCV.pdf" className="md:mt-10" download={true}>
+          <a
+            href="/Ahmed-Salah-FrontEnd-Developer.pdf"
+            className="md:mt-10"
+            download={true}
+          >
             <MagicButton
               title="Downloa My Resume"
               icon={<FaFileDownload className="w-[20px] h-[20px]" />}
