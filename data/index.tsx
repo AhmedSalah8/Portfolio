@@ -189,7 +189,7 @@ export const socialMedia = [
     id: 1,
     href: "https://github.com/AhmedSalah8",
     alt: "github",
-    img: "/git.svg",
+    img: "/github.svg",
   },
   {
     id: 2,
