@@ -13,6 +13,43 @@ export function TimelineDemo() {
           py-2 px-1  rounded-2xl border-[1px] border-[#ffffff0f] bg-[#ffffff05] my-4"
           >
             <h1 className="pl-2 text-neutral-800 mb-2 dark:text-neutral-200 font-normal ">
+              Frontend Developer Intern
+            </h1>
+            <div className="flex justify-between">
+              <p className="pl-2 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                Cura Health Care{" "}
+              </p>
+              <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                05/2025 - Present{" "}
+              </p>
+            </div>
+
+            <div className="lg:py-14 lg:px-12 p-4 rounded-2xl border-[1px] border-[#ffffff0f] bg-[#ffffff05]">
+              <ul className="list-disc pl-5 space-y-4 text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                <li>
+                  Converted Figma designs into fully responsive React components
+                  with pixel-perfect accuracy.
+                </li>
+                <li>
+                  Integrated REST APIs to display dynamic data across multiple
+                  pages.
+                </li>
+                <li>
+                  Developed reusable and modular components to speed up
+                  development.
+                </li>
+                <li>
+                  Collaborated with senior developers in code reviews and UI/UX
+                  improvements.
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div
+            className="lg:py-14 lg:px-12 md:py-8 md:px-6
+          py-2 px-1  rounded-2xl border-[1px] border-[#ffffff0f] bg-[#ffffff05] my-4"
+          >
+            <h1 className="pl-2 text-neutral-800 mb-2 dark:text-neutral-200 font-normal ">
               CREATED WEBSITE FOR <span className="text-yellow-400">ENI</span>{" "}
               COMPANY
             </h1>
@@ -47,7 +84,7 @@ export function TimelineDemo() {
           py-2 px-1 rounded-2xl border-[1px] border-[#ffffff0f] bg-[#ffffff05]"
           >
             <h1 className="pl-2 text-neutral-800 dark:text-neutral-200  font-normal mb-2">
-              JAVASCRIPT INSTRUCTOR{" "}
+              JAVASCRIPT INSTRUCTOR
             </h1>
             <div className="flex justify-between">
               <p className="text-neutral-800 pl-2 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">

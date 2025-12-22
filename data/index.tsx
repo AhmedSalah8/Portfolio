@@ -108,22 +108,22 @@ const iconLists = {
 
 export const projects = [
   {
-    id: 802966801,
-    title: "Age Calculator App ",
-    des: "The Age Calculator app allows users to easily calculate their age by entering their date of birth. ",
-    img: "/Age-Calculator.png",
+    id: 1115445211,
+    title: "Banking Dashboard ",
+    des: "Banking dashboard UI built using Next.js, TypeScript, and reusable components for a scalable and maintainable frontend.",
+    img: "/bank.jpeg",
     iconLists: ["/re.svg"],
-    link: "https://age-calculator-rho-coral.vercel.app/",
-    repoName: "Age-Calculator",
+    link: "https://banking-dashboard-tau.vercel.app/",
+    repoName: "Banking-Dashboard",
   },
   {
-    id: 687416154,
-    title: "Tenzies React Game",
-    des: " Tenzies is a fast-paced dice game. The goal of the game is choose the same dice and rool to get all the same dice to be the same.",
-    img: "/Tenzies-Game.png",
+    id: 1088183640,
+    title: "Landing Page",
+    des: " A clean, responsive landing page UI built with Next.js and pure CSS, focused on modern design and user engagement.",
+    img: "/landing-page.jpeg",
     iconLists: ["/re.svg"],
-    link: "https://tenzies-lac.vercel.app/",
-    repoName: "Tenzies-Game",
+    link: "https://landing-page-omega-two-15.vercel.app/",
+    repoName: "Landing-Page",
   },
   {
     id: 779469986,
@@ -147,26 +147,6 @@ export const projects = [
 
 export const skills = [
   {
-    title: "HTML",
-    img: "/html.svg",
-  },
-  {
-    title: "CSS",
-    img: "/css.svg",
-  },
-  {
-    title: "JavaScript",
-    img: "/javascript.svg",
-  },
-  {
-    title: "Bootstrap",
-    img: "/bootstrap.svg",
-  },
-  {
-    title: "Tailwind CSS",
-    img: "/tailwind-css.svg",
-  },
-  {
     title: "React.js",
     img: "/react.svg",
   },
@@ -178,6 +158,28 @@ export const skills = [
     title: "Next.js",
     img: "/next.svg",
   },
+  {
+    title: "JavaScript",
+    img: "/javascript.svg",
+  },
+  {
+    title: "HTML",
+    img: "/html.svg",
+  },
+  {
+    title: "CSS",
+    img: "/css.svg",
+  },
+
+  {
+    title: "Bootstrap",
+    img: "/bootstrap.svg",
+  },
+  {
+    title: "Tailwind CSS",
+    img: "/tailwind-css.svg",
+  },
+
   {
     title: "Git",
     img: "/git-logo.svg",
