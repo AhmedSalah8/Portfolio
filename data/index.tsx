@@ -135,13 +135,13 @@ export const projects = [
     repoName: "Users-Angular-App",
   },
   {
-    id: 709309001,
-    title: "ToDo React App",
-    des: "ToDo List App is a kind of app that generally used to maintain our day-to-day tasks or list everything that we have to do, it's Interactive, Responsive and User-friendly.",
-    img: "/todo-app.png",
+    id: 1142089449,
+    title: "OYOTEE_Plant-Shop",
+    des: "OYOTEE is a modern, high-performance E-commerce web application dedicated to plant enthusiasts. Built with React and Next.js, it offers a seamless shopping experience with a focus on clean UI/UX and efficient state management.",
+    img: "/plant-shop.png",
     iconLists: ["/re.svg"],
-    link: "https://to-do-app-two-umber.vercel.app/",
-    repoName: "ToDo-App",
+    link: "https://oyotee-plant-shop.vercel.app/",
+    repoName: "OYOTEE_Plant-Shop",
   },
 ];
 

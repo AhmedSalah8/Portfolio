@@ -13,7 +13,7 @@ async function fetchData(repo: string) {
       headers: HEADERS,
     });
     if (!response.ok)
-      throw new Error(`Failed to fetch ${repo}: ${response.statusText}`);
+      console.log(`Failed to fetch ${repo}: ${response.statusText}`);
     return response.json();
   } catch (error) {
     console.error(error);
@@ -24,7 +24,11 @@ async function fetchData(repo: string) {
 export async function GET(request: Request) {
   const repoNames = projects.map((project) => project.repoName);
 
-  const results = await Promise.allSettled(repoNames.map(fetchData));
+  const results = await Promise.allSettled(
+    repoNames
+      .filter((repo): repo is string => repo !== undefined)
+      .map(fetchData)
+  );
 
   // Extract fulfilled results, replacing rejected ones with `null`
   const fetchedData = results.map((res) =>

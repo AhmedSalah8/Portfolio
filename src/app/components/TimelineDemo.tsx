@@ -114,6 +114,7 @@ export function TimelineDemo() {
       title: "Education",
       content: (
         <div
+          key={"education"}
           className="lg:py-14 lg:px-12 md:py-8 md:px-6
           py-2 px-1 rounded-2xl border-[1px] border-[#ffffff0f] bg-[#ffffff05]"
         >
