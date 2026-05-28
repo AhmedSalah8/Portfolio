@@ -105,14 +105,21 @@ export const gridItems = [
 const iconLists = {
   "802966801": ["/re.svg"],
 };
-
+//to get the api link of any project https://api.github.com/repos/{owner}/{repo}
 export const projects = [
+  {
+    id: 1215420257,
+    title: "Taskeen Web App",
+    des: " A site that chooses Quranic verses for you based on your mood. ",
+    img: "/taskeen.png",
+    link: "https://taskeen.vercel.app",
+    repoName: "Taskeen",
+  },
   {
     id: 1115445211,
     title: "Banking Dashboard ",
     des: "Banking dashboard UI built using Next.js, TypeScript, and reusable components for a scalable and maintainable frontend.",
     img: "/bank.jpeg",
-    iconLists: ["/re.svg"],
     link: "https://banking-dashboard-tau.vercel.app/",
     repoName: "Banking-Dashboard",
   },
@@ -121,25 +128,14 @@ export const projects = [
     title: "Landing Page",
     des: " A clean, responsive landing page UI built with Next.js and pure CSS, focused on modern design and user engagement.",
     img: "/landing-page.jpeg",
-    iconLists: ["/re.svg"],
     link: "https://landing-page-omega-two-15.vercel.app/",
     repoName: "Landing-Page",
-  },
-  {
-    id: 779469986,
-    title: "Users Angular App",
-    des: " This app manages users by fetching data from an external API, enabling search by ID, displaying detailed user info, and navigating between pages. ",
-    img: "/Users-Angular-App.png",
-    iconLists: ["/ang.png"],
-    link: "https://users-psi-woad.vercel.app/",
-    repoName: "Users-Angular-App",
   },
   {
     id: 1142089449,
     title: "OYOTEE_Plant-Shop",
     des: "OYOTEE is a modern, high-performance E-commerce web application dedicated to plant enthusiasts. Built with React and Next.js, it offers a seamless shopping experience with a focus on clean UI/UX and efficient state management.",
     img: "/plant-shop.png",
-    iconLists: ["/re.svg"],
     link: "https://oyotee-plant-shop.vercel.app/",
     repoName: "OYOTEE_Plant-Shop",
   },

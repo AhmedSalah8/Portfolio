@@ -8,6 +8,7 @@ interface RepoData {
   img: string;
   stargazers_count: number;
   homepage: string;
+  iconLists: string;
 }
 
 export default function useRepoData() {
