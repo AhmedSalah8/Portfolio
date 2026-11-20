@@ -24,7 +24,7 @@ function Hero() {
             functional user interfaces.
           </p>
           <a
-            href="/Ahmed-Salah-FrontEnd-Developer.pdf"
+            href="/Ahmed_Salah_Frontend.pdf"
             className="md:mt-10"
             download={true}
           >
