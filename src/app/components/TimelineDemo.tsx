@@ -20,7 +20,7 @@ export function TimelineDemo() {
                 Cura Health Care{" "}
               </p>
               <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                05/2025 - Present{" "}
+                Apr 2025 - Sep 2025{" "}
               </p>
             </div>
 

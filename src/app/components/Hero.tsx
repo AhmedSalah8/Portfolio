@@ -29,7 +29,7 @@ function Hero() {
             download={true}
           >
             <MagicButton
-              title="Downloa My Resume"
+              title="Download My Resume"
               icon={<FaFileDownload className="w-[20px] h-[20px]" />}
               position="right"
             />

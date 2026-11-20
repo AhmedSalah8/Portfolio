@@ -117,10 +117,10 @@ export const projects = [
   },
   {
     id: 1115445211,
-    title: "Banking Dashboard ",
-    des: "Banking dashboard UI built using Next.js, TypeScript, and reusable components for a scalable and maintainable frontend.",
-    img: "/bank.jpeg",
-    link: "https://banking-dashboard-tau.vercel.app/",
+    title: "Focus Shield Extension ",
+    des: "Block distracting websites with a shared daily focus-time limit, temporary access, and a one-time emergency Firefox extension.",
+    img: "/focus-shield.png",
+    link: "https://addons.mozilla.org/en-GB/firefox/addon/focus-shield-guard/",
     repoName: "Banking-Dashboard",
   },
   {
@@ -204,7 +204,7 @@ export const socialMedia = [
   {
     id: 4,
     img: "/resume.svg",
-    href: "/myCV.pdf",
+    href: "/Ahmed_Salah_Frontend.pdf",
     alt: "resume",
     download: true,
   },
