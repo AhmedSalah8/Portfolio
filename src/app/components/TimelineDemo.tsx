@@ -30,10 +30,7 @@ export function TimelineDemo() {
                   Converted Figma designs into fully responsive React components
                   with pixel-perfect accuracy.
                 </li>
-                <li>
-                  Integrated REST APIs to display dynamic data across multiple
-                  pages.
-                </li>
+
                 <li>
                   Developed reusable and modular components to speed up
                   development.
